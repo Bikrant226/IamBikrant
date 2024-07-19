@@ -11,7 +11,7 @@
 .profile-parent-container #profile-img{
     height: 240px;
     width: 240px;
-    border: 1px solid  rgb(237, 202, 27);
+    border: 1px solid  red;
     border-radius: 50% 50%;
     position: relative;
     left: 40%;
@@ -24,9 +24,27 @@
   font-size: x-large;
   font-style: normal;
   position: relative;
+  top: -70px;
+  border: 1px solid red;
   left: 32%;
+  width: fit-content;
 }
 
 .profile-parent-container  span{
     color: #e77575;
+}
+
+.profile-parent-container #social-media{
+    border: 1px solid red;
+    max-width: fit-content;
+    position: relative;
+    left: 42%;
+}
+
+.profile-parent-container #social-media span{
+    padding: 10px;
+}
+
+.profile-parent-container #social-media span img{
+    height: 30px;
 }
