@@ -1,44 +1,27 @@
-import  { useState } from 'react'
 import '../styles/work.css'
-import Modal from './Modal'
+import {projects} from '../datas/projects'
+function Work() {
 
-
-export default function Work() {
-    const works=[
-        {
-            "id":1,
-            "title":"Demo Project 1",
-            "description":"This is a demo project 1",
-            "thumbnail":"/assets/project-management.png"
-        }
-    ]
-
-    const [work,setWork]=useState([]);
-    const[isActive,setIsActive]=useState(false);
-
-    const handleClick=(id)=>{
-        const filteredWork=works.find(item=>item.id==id)
-        setWork([filteredWork]);
-        setIsActive(prev=>!prev)
-    }
-    console.log(isActive)
-    
-
+  console.log(projects)
   return (
-    <>
-        <div className='work-parent-container'>
-            <p id='text'>My Works</p>
-            <div className='parent'>
-            {works.map(i=>
-                <div key={i.id} id='work-container' onClick={()=>handleClick(i.id)}>
-                    <p id='title'>{i.title}</p>
-                    <img src={i.thumbnail} alt="demo" />
-                </div>
-            )}
+    <div className='work-parent'>
+      <p id='work-header'>My works</p>
+      <div className='work-list'>
+        {
+          projects.map(item=>(
+            <div key={item.id} className='projects'>
+              <p id='title'><strong>{item.title}</strong></p>
+              <p id='desc'>{item.description}</p>
+              <div id='external-link'>
+                <a href={item.liveUrl}>View Live</a>
+                <a href={item.githubUrl}>Github</a>
+              </div>
             </div>
-        </div>
-
-        {isActive && <Modal isActive={isActive} setIsActive={setIsActive} workList={work}/>}
-    </>
+          ))
+        }
+      </div>
+    </div>
   )
 }
+
+export default Work

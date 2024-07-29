@@ -1,12 +1,19 @@
-import Profile from './Components/Profile'
+import React from 'react'
+import About from './Components/About'
 import Work from './Components/Work'
-import './app.css'
+import Skills from './Components/Skills'
+import './styles/app.css'
+
 function App() {
-  const words=["Developer","Learner","Tech Enthusiat","Movie-goer"]
   return (
-    <div>
-      <Profile/>
-      <Work/>
+    <div className='parent'>
+      <div className='left'>
+        <About/>
+        <Skills/>
+      </div>
+      <div className='right'>
+        <Work/>
+      </div>
     </div>
   )
 }
