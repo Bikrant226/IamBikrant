@@ -1,0 +1,21 @@
+
+.modal-parent{
+    border: 1px dashed green;
+    height: 270px;
+    width: 60%;
+    font-size: small;
+    background-color: white;
+    position: relative;
+    left: 25%;
+    top: -60%;
+    display: flex;
+    flex-direction: row;
+    overflow-y: scroll;
+}
+
+ #subcategory{
+    font-size: large;
+}
+.modal-parent ul{
+    list-style-type: none;
+}

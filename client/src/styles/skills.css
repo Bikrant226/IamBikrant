@@ -1,5 +1,33 @@
 .skills-parent{
     border: 1px solid red;
+    border-radius:25px;
+    background-color: #9BF6FF50;
     margin-top: 20px;
     height: 37vh;
+}
+
+#skill-header{
+    color: #4495BB;
+    font-weight: 400;
+    font-size: 34px;
+    position: relative;
+    left: 5px;
+    top: -20px;
+    border:1px solid red;
+}
+
+#skill-text{
+    color: #4495BB;
+    font-size: 20px;
+    border: 1px solid #3c7691;
+    border-radius: 10px;
+    width: fit-content;
+    position: relative;
+    left: 5px;
+    top: -30px;
+    padding: 5px;
+}
+
+#skill-text:active{
+    background-color: #ffffff;
 }
